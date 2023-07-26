@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Datos de la base de datos de destino</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <h1>Datos de la base de datos de destino</h1>
+  </div>
+  <div class="container">
+  <table class="table table-hover table-bordered border-sucess">
+    <tr>
+      <th class="table-dark">anime_id</th>
+      <th class="table-dark">name</th>
+      <th class="table-dark">genre</th>
+      <th class="table-dark">type</th>
+      <th class="table-dark">episodes</th>
+      <th class="table-dark">rating</th>
+      <th class="table-dark">members</th>
+    </tr>
+    <% data.forEach(anime => { %>
+      <tr>
+        <td><%= anime.anime_id %></td>
+        <td><%= anime.name %></td>
+        <td><%= anime.genre %></td>
+        <td><%= anime.type %></td>
+        <td><%= anime.episodes %></td>
+        <td><%= anime.rating %></td>
+        <td><%= anime.members %></td>
+      </tr>
+    <% }); %>
+  </table>
+</div>
+</body>
+</html>
+
