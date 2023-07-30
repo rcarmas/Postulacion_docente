@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='form_validation.js') }}"></script>
+</head>
+
+<body>
+    <h1>Postulacion Docente</h1>
+    <form method="POST" action="/"onsubmit="return validateForm()">
+        <label for="tipo_identificacion">Tipo de Identificación:</label>
+        <select id="tipo_identificacion" name="tipo_identificacion">
+            <option value="pasaporte">Pasaporte</option>
+            <option value="cedula">Cedula</option>
+        </select><br><br>
+        
+        <label for="id">No. de Identificacion:</label>
+        <input type="text" id="id" name="id" pattern="\d{1,10}" title="El No. de Identificación debe contener solo números y máximo 10 dígitos"><br><br>
+
+        <label for="nombre">Nombres:</label>
+        <input type="text" id="nombre" name="nombre" pattern="[A-Z][a-z]*" title="El Nombre debe empezar con mayúscula"><br><br>
+
+        <label for="provincia">Apellido Paterno:</label>
+        <input type="text" id="provincia" name="provincia" pattern="[A-Z][a-z]*" title="El Apellido Paterno debe empezar con mayúscula"><br><br>
+
+        <label for="clase">E-mail:</label>
+        <input type="text" id="clase" name="clase" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Ingrese un Email válido"><br><br>
+
+        <label for="sector">Contraseña:</label>
+        <input type="text" id="sector" name="sector" pattern="(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" title="La Contraseña debe tener mínimo 8 caracteres con al menos una mayúscula, un número y un caracter especial"><br><br>
+
+        <label for="mes">Confirmar Contraseña:</label>
+        <input type="text" id="mes" name="mes"><br><br>
+        
+        <input type="submit" value="Guardar">
+    </form>
+    <!-- Agregar botones de navegación -->
+    <!-- Contenedor para los botones de navegación -->
+    <div class="botones-navegacion">
+        <form method="POST" action="/anterior">
+            <button type="submit">Atrás</button>
+        </form>
+
+        <form method="POST" action="/siguiente">
+            <button type="submit" class="btn-siguiente">Siguiente</button>
+        </form>
+    </div>
+
+</body>
+</html>
