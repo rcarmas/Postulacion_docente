@@ -10,7 +10,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-:root {
+ :root {
   --blue: #4e73df;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -7113,10 +7113,6 @@ button.bg-dark:focus {
   background-color: #fff !important;
   /*fff 344675  222a42*/
 }
-.bg-dark {
-  background-color: #344675 !important;
-  /*fff 344675  222a42*/
-}
 
 .bg-transparent {
   background-color: transparent !important;
@@ -12108,7 +12104,7 @@ a:focus {
 }
 
 .bg-login-image {
-  background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800");
+  background: url("../img/portada.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -13179,7 +13175,6 @@ a.badge-darker.focus {
 /* Styles for the dark version */
 body.dark-content {
   background: #222a42;
-  color: #ffffff;
 }
 
 .dark-content .navbar.navbar-transparent .navbar-brand {
@@ -13543,12 +13538,6 @@ body.dark-content {
   background: #cccccc;
 }
 
-.dark-content .text-gray-800  {
-  color: #fff !important;
-}
-.dark-content .text-gray-600  {
-  color: #fff !important;
-}
 
 
 
