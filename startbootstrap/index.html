@@ -285,7 +285,7 @@
                     </ul>
 
                 </nav>
-                <!-- End of Topbar bg-white -->
+                <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
@@ -659,10 +659,15 @@
 
                 $('.bg-dark').click(function () {
                     $('body').addClass('dark-content');
+                    $('footer, nav, div:has(.bg-white)').addClass('bg-dark');
+                    // $('footer, nav, div:has(.bg-dark)').removeClass('bg-white');
+                    
                 });
 
                 $('.bg-light').click(function () {
                     $('body').removeClass('dark-content');
+                    // $('footer, nav, div:has(.bg-dark)').addClass('bg-white');
+                    $('footer, nav, div:has(.bg-dark)').removeClass('bg-dark');
                 });
             });
         });

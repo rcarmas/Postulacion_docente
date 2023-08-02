@@ -7113,6 +7113,10 @@ button.bg-dark:focus {
   background-color: #fff !important;
   /*fff 344675  222a42*/
 }
+.bg-dark {
+  background-color: #344675 !important;
+  /*fff 344675  222a42*/
+}
 
 .bg-transparent {
   background-color: transparent !important;
@@ -13175,6 +13179,7 @@ a.badge-darker.focus {
 /* Styles for the dark version */
 body.dark-content {
   background: #222a42;
+  color: #ffffff;
 }
 
 .dark-content .navbar.navbar-transparent .navbar-brand {
@@ -13538,6 +13543,12 @@ body.dark-content {
   background: #cccccc;
 }
 
+.dark-content .text-gray-800  {
+  color: #fff !important;
+}
+.dark-content .text-gray-600  {
+  color: #fff !important;
+}
 
 
 
