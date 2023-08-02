@@ -8,7 +8,7 @@
 
 <body>
     <h1>Postulacion Docente</h1>
-    <form method="POST" action="/"onsubmit="return validateForm()">
+    <form method="POST" action="/procesar" onsubmit="return validateForm()">
         <label for="tipo_identificacion">Tipo de Identificación:</label>
         <select id="tipo_identificacion" name="tipo_identificacion">
             <option value="pasaporte">Pasaporte</option>
@@ -21,17 +21,17 @@
         <label for="nombre">Nombres:</label>
         <input type="text" id="nombre" name="nombre" pattern="[A-Z][a-z]*" title="El Nombre debe empezar con mayúscula"><br><br>
 
-        <label for="provincia">Apellido Paterno:</label>
-        <input type="text" id="provincia" name="provincia" pattern="[A-Z][a-z]*" title="El Apellido Paterno debe empezar con mayúscula"><br><br>
+        <label for="apellido">Apellido Paterno:</label>
+        <input type="text" id="apellido" name="apellido" pattern="[A-Z][a-z]*" title="El Apellido Paterno debe empezar con mayúscula"><br><br>
 
-        <label for="clase">E-mail:</label>
-        <input type="text" id="clase" name="clase" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Ingrese un Email válido"><br><br>
+        <label for="mail">E-mail:</label>
+        <input type="text" id="mail" name="mail" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Ingrese un Email válido"><br><br>
 
-        <label for="sector">Contraseña:</label>
-        <input type="text" id="sector" name="sector" pattern="(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" title="La Contraseña debe tener mínimo 8 caracteres con al menos una mayúscula, un número y un caracter especial"><br><br>
+        <label for="contraseña">Contraseña:</label>
+        <input type="text" id="contraseña" name="contraseña" pattern="(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" title="La Contraseña debe tener mínimo 8 caracteres con al menos una mayúscula, un número y un caracter especial"><br><br>
 
-        <label for="mes">Confirmar Contraseña:</label>
-        <input type="text" id="mes" name="mes"><br><br>
+        <label for="contraseña">Confirmar Contraseña:</label>
+        <input type="text" id="contraseña" name="contraseña"><br><br>
         
         <input type="submit" value="Guardar">
     </form>
