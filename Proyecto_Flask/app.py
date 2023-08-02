@@ -20,7 +20,7 @@ postgres_connection = {
 
 @app.route('/')
 def index():
-    return render_template('form.html')
+    return render_template('form1.html')
 
 
 @app.route('/procesar', methods=['POST'])
