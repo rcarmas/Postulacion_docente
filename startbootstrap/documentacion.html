@@ -23,6 +23,22 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Obtén todos los campos de archivo y sus respectivos contadores
+            const fileInputs = document.querySelectorAll(".form-control-file");
+            const countSpans = document.querySelectorAll(".text-muted");
+    
+            // Agrega un evento de cambio a cada campo de archivo
+            fileInputs.forEach(function (input, index) {
+                input.addEventListener("change", function () {
+                    const files = input.files;
+                    countSpans[index].textContent = files.length;
+                });
+            });
+        });
+    </script>
+    
 </head>
 
 <body id="page-top" class="">
