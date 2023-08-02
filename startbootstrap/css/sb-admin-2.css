@@ -13723,3 +13723,11 @@ body.dark-content {
 .dark-content .nav-pills .nav-item .nav-link:not(.active):hover {
   background-color: #cccccc;
 }
+
+.animated-card {
+    transition: transform 0.3s ease;
+}
+
+.animated-card:hover {
+    transform: scale(1.05);
+}
