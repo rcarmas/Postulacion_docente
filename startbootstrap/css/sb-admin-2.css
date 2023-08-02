@@ -10,7 +10,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
- :root {
+:root {
   --blue: #4e73df;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -7099,7 +7099,8 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #5a5c69 !important;
+  background-color: #344675 !important;
+  /*fff 344675  222a42*/
 }
 
 a.bg-dark:hover,
@@ -13538,13 +13539,22 @@ body.dark-content {
   background: #cccccc;
 }
 
+.dark-content .text-gray-800 {
+  color: #fff !important;
+}
+
+.dark-content .text-gray-600 {
+  color: #fff !important;
+}
 
 
+.divider {
+  border-top: 1px solid #9a9a9a;
+}
 
-.dark-content .navbar,
-.dark-content .navbar-expand .navbar-nav .nav-link,
-.dark-content .navbar-light .navbar-nav .nav-link {
-  color: #ffffff;
+
+.dark-content .divider {
+  border-top: 1px solid #eaecf4;
 }
 
 .dark-content .topbar-divider {
@@ -13558,7 +13568,7 @@ body.dark-content {
 
 .dark-content .form-control {
   background-color: #444c6f;
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
   color: #222a42;
 }
 
@@ -13724,10 +13734,10 @@ body.dark-content {
   background-color: #cccccc;
 }
 
-.animated-card {
-    transition: transform 0.3s ease;
+.dark-content .text-gray-800 {
+  color: #fff !important;
 }
 
-.animated-card:hover {
-    transform: scale(1.05);
+.dark-content .text-gray-600 {
+  color: #fff !important;
 }

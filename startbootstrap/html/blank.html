@@ -127,7 +127,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -239,7 +239,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+            <footer class="sticky-footer">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span> Copyright &copy; Universidad de las Fuerzas Armandas - ESPE 2023 | Unidad de Administración </span>
@@ -319,7 +319,7 @@
 
                 $('.bg-dark').click(function () {
                     $('body').addClass('dark-content');
-                    $('footer, nav, div:has(.bg-white)').addClass('bg-dark');
+                    $('footer, nav, div:has(bg-white)').addClass('bg-dark');
                     // $('footer, nav, div:has(.bg-dark)').removeClass('bg-white');
                     
                 });
