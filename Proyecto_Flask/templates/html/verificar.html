@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title>Postulación Docente | Validar</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{{ url_for('static', filename='css/sb-admin-2.css') }}" rel="stylesheet">
+
+</head>
+
+<body class="bg-gradient-success">
+
+    <a href="{{ url_for('login') }}" class="btn btn-success rounded-circle position-fixed" style="top: 20px; left: 20px; width: 60px; height: 60px; background-color: white; display: flex; justify-content: center; align-items: center;">
+        <i class="fas fa-arrow-left text-success" style="font-size: 1.5rem;"></i>
+    </a>
+
+    <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <br>
+                                    <div class="text-center">
+                                        <h1 class="text-gray-900 mb-4">Postulación Docente</h1>
+                                        <hr>
+                                        <h2 class="h4 text-gray-900 mb-4">Ingrese la cédula</h2>
+                                    </div>
+                                    
+                                    <form id="form-validation" class="user" method="post" action="{{ url_for('register') }}">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-user"
+                                                id="cedulaInput"
+                                                placeholder="Ingrese la cédula">
+                                        </div>
+
+                                        <button class="btn btn-success btn-user btn-block">
+                                            Validar
+                                        </button>
+                                    </form>
+                                    <hr>
+                                    <br><br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{{ url_for('static', filename='js/sb-admin-2.min.js') }}"></script>
+
+
+    <!-- <script>
+        document.getElementById('form-validation').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            const cedula = document.getElementById('cedulaInput').value;
+            if (cedula) {
+                // Make a POST request to your Flask backend to fetch data based on the cedula
+                fetch('/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        'ci': cedula
+                    })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        // Assuming that the response data contains the person_info object with necessary fields
+                        const personInfo = data.data.person_info;
+                        // Store the data in the session storage to use it in the next page (register.html)
+                        sessionStorage.setItem('personInfo', JSON.stringify(personInfo));
+                        // Redirect to the 'register.html' page
+                        window.location.href = './register.html';
+                    })
+                    .catch(error => {
+                        console.error('Error fetching data:', error);
+                    });
+            } else {
+                alert('Por favor ingrese una cedula antes de buscar datos.');
+            }
+        });
+    </script> -->
+
+</body>
+
+</html>

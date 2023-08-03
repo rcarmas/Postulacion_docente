@@ -49,10 +49,10 @@
                                         <h2 class="h4 text-gray-900 mb-4">Ingrese la cédula</h2>
                                     </div>
                                     
-                                    <form class="user" method="post" action="./register.html">
+                                    <form id="form-validation" class="user" method="post" action="./register.html">
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                            <input type="text" class="form-control form-control-user"
+                                                id="cedulaInput"
                                                 placeholder="Ingrese la cédula">
                                         </div>
 
@@ -83,6 +83,40 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+
+
+    <script>
+        document.getElementById('form-validation').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            const cedula = document.getElementById('cedulaInput').value;
+            if (cedula) {
+                // Make a POST request to your Flask backend to fetch data based on the cedula
+                fetch('/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        'ci': cedula
+                    })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        // Assuming that the response data contains the person_info object with necessary fields
+                        const personInfo = data.data.person_info;
+                        // Store the data in the session storage to use it in the next page (register.html)
+                        sessionStorage.setItem('personInfo', JSON.stringify(personInfo));
+                        // Redirect to the 'register.html' page
+                        window.location.href = './register.html';
+                    })
+                    .catch(error => {
+                        console.error('Error fetching data:', error);
+                    });
+            } else {
+                alert('Por favor ingrese una cedula antes de buscar datos.');
+            }
+        });
+    </script>
 
 </body>
 
