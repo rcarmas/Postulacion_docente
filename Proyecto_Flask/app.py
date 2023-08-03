@@ -18,9 +18,42 @@ postgres_connection = {
 # mongo_collection = mongo_db['usuario']
 
 
-@app.route('/')
+# @app.route('/')
+# def index():
+#     return render_template('form1.html')
+
+
+@app.route('/') #, methods=['GET', 'POST'])
 def index():
-    return render_template('form1.html')
+    # if request.method == 'POST':
+    #     ci = request.form['ci']
+    #     # Use the 'ci' variable to fetch data from your API (here we are using the sample_data)
+    #     # Replace 'sample_data' with your API call to fetch real data
+    #     data = sample_data
+    #     return jsonify(data)  # Return the JSON data to be processed by JavaScript
+    return render_template('index.html')
+
+@app.route('/documentacion')
+def documentacion():
+    return render_template('html/documentacion.html')
+
+@app.route('/infoPersonal')
+def infoPersonal():
+    return render_template('html/informacion-personal.html')
+
+@app.route('/login')
+def login():
+    return render_template('html/login.html')
+
+@app.route('/register')
+def register():
+    return render_template('html/register.html')
+
+@app.route('/verificar')
+def verificar():
+    return render_template('html/verificar.html')
+
+
 
 
 @app.route('/procesar', methods=['POST'])
